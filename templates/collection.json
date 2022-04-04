@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1647238886d2971a09": {
+      "type": "tab_collection",
+      "blocks": {
+        "1647238886a726c041-0": {
+          "type": "Collection",
+          "settings": {
+            "title2": "",
+            "collection": "all-clothing",
+            "product": "",
+            "url": "shopify:\/\/collections\/all-clothing"
+          }
+        },
+        "1647238886a726c041-1": {
+          "type": "Collection",
+          "settings": {
+            "title2": "",
+            "collection": "",
+            "product": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "1647238886a726c041-0",
+        "1647238886a726c041-1"
+      ],
+      "settings": {
+        "title": "Tab collection",
+        "sub_title": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1647238886d2971a09"
+  ]
+}

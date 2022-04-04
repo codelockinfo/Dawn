@@ -1,0 +1,58 @@
+<div class="sec">{{section.settings.heading}}</div>
+
+<div class="cr1">
+{% for block in section.blocks%}
+<div class="col1"><img src="{{block.settings.image| img_url:''}}"/></div>
+  
+{%endfor%}
+ 
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "image slidshow",
+    "max_blocks": 3,
+    "settings": [
+              {
+				"type":"text",
+                "label":"headline",
+                "id":"heading",
+                "default":"Your text"
+              }
+
+],
+
+ "blocks": [
+			{
+             "type": "image",
+             "name": "Image",
+             "settings": [
+              {
+        	   "type": "image_picker",
+               "id": "image",
+               "label": "Image"
+              }
+   
+      ]
+    }],
+  
+     "presets":[
+			 {
+             "name":"Image Slidshow",
+              "category": "collections",
+              "blocks": [
+               { "type": "image" },
+               { "type": "image" },
+               { "type": "image" }
+            
+                      ]
+			}
+]
+
+}
+
+
+{% endschema %}
+

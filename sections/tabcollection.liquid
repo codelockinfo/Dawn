@@ -1,0 +1,220 @@
+  {% assign count = 0 %}
+  <div class="page-width main_tab_collection cl1">
+    <div class="main_tab_collection_heading tc cl2"> {{section.settings.title}}</div>
+
+    <div class="block_collection_title cl3">
+      <ul class="main_block_title tc cl4">
+        {%- for block in section.blocks -%}
+          {% assign count = count | plus: 0 %}
+        {%- assign collection = collections[block.settings.collection] -%}
+        <li class="block_title"><a id="demo1" href="#tab-{{forloop.index}}" data-index="{{count}}" class="tabs {% if forloop.first %}code-current{% endif %}">{{ collection.title}}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+
+    <div class="block_collection_image cl5">
+      {%- for block in section.blocks -%}
+        {% assign count = count | plus: 1 %}
+        {%- assign collection = collections[block.settings.collection] -%}
+       {% paginate collection.products by 8 %}
+      <div class="block_collection collection_product cl6{% if forloop.first %} active {% endif %}" id="tab-{{forloop.index}}">
+        <div class="display-flex">
+   
+        {%- for product in collection.products -%}
+                 <div class="hav_pro cl7" >
+                   {% if product.featured_image != blank %}
+                   <div class="product_block cl8"><a href="{{ product.url}}" class="cool_img"> <img src="{{ product.featured_image | img_url: 'master'  }}" / class="lazyload avenue_img"></a>
+                     <div class="product_tittle cl9">
+                       {{product.title}}
+                       <br>
+                       {{product.price}}
+                     </div>
+                   </div>
+                   {% endif  %}
+                </div>
+        {%- endfor -%}
+        
+      </div>
+<!--          <div class="view-button">
+        <a href="collections/{{collection.handle}}">View More</a>
+      </div> -->
+        </div>
+      
+
+      
+        {% endpaginate %}
+      {%- endfor -%}
+    </div>
+  </div>
+  {% schema %}
+    {
+      "name": "TAB_Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Tab Collection"
+        }
+          ],
+   "blocks": [{
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title block"
+        },
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection"
+        }
+      ]
+        }],
+  "presets": [
+        {
+          "name": "Tab collection",
+          "category": "Collections"       
+        }
+      ]
+    }
+  {% endschema %}
+
+  <style>
+    .cl3{
+    margin-right: 100px;
+    }
+    .tc{
+      text-align: center;
+    }
+     .cl2{
+    font-family: sans-serif;
+    color: black;
+    font-size: 34px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    }
+       .block_title .code-current{
+      padding: 8px 25px 7px;
+      border: 1px solid transparent;
+      border-color: #222;
+      border-radius: 3%;
+    }
+    .block_title  a{
+      color: black;
+      text-decoration: none;
+    }
+     .product_tittle.cl9{
+        color: black;
+         margin-bottom: 10px;
+        line-height: 17px;
+
+    }
+    .main_block_title{
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+    }
+    li{
+        list-style: none;
+    }
+     .hav_pro{
+      flex: 0 0 25%;
+      max-width: 25%;
+      justify-content: center;
+    }
+/*     .collection_product{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    } */
+    .product_block img{
+    width: 200px;
+    height: 200px;
+    }
+    .product_block{
+    display:block;
+    }
+
+   .block_collection_image .block_collection{
+     display:flex;
+     position: relative;
+
+    }
+    .block_collection_image .collection_product.active {
+        display:block;
+  }
+      .block_collection_image  .collection_product {
+      display:none;
+
+  }
+     .display-flex{
+      display:flex;
+      flex-wrap: wrap;
+    }
+     .cl3{
+      margin-bottom: 5%;
+
+    }
+     @media only screen and (max-width: 988px) {
+  .hav_pro{
+      flex: 0 0 75%;
+      max-width: 33%;
+      justify-content: center;
+    }
+}
+ @media only screen and (max-width: 765px) {
+  .hav_pro{
+    flex: 0 0 50%;
+    max-width: 50%;
+    justify-content: center;
+    }
+     .product_block img{
+      width: 200px;
+      height: 200px;
+    }
+}
+ @media only screen and (max-width: 440px) {
+    .product_block img{
+          width: 150px;
+    height: 150px;
+    }
+}
+ @media only screen and (max-width: 345px) {
+   .hav_pro{
+    flex: 0 0 100%;
+    max-width: 100%;
+    justify-content: center;
+    }
+   .product_block img{
+    width: 200px;
+    height: 200px;
+    }
+}
+    
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script>
+
+//   $( document).ready(function() {
+     $(document).on('click','#demo1',function(e){
+        e.preventDefault()
+
+        var value = $(this).attr('href');
+        console.log(value);
+        $('.block_collection.active').removeClass('active ');
+        $(value).addClass('active ');
+
+        $('.tabs.code-current').removeClass('code-current');
+        $(this).addClass('code-current');
+    })
+//   })
+  </script>
+  
+

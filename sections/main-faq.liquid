@@ -1,0 +1,261 @@
+<div class="pagelayout">
+<div class="page">
+  
+  <div class="container">
+   <div class="cls">
+ <div class="section">
+   {% for block in section.blocks %}
+       <div class="head">
+           <li class="FaqSummary__Item ">
+              <a href="#block-{{ block.id }}" class="FaqSummary__Link">
+                 <span class="FaqSummary__LinkLabel">{{ block.settings.title | escape }}</span>
+              </a>
+           </li>
+       </div>
+ {% endfor %}
+ </div>
+</div>
+  </div>
+  
+  
+  <div class="Faq">
+    {%- for block in section.blocks -%}
+    
+          <h1 class="Faq__Section Heading u-h1">
+             <span class="Anchor" id="block-{{ block.id }}"></span>
+            {{- block.settings.title | escape -}}
+          </h1>
+
+        
+          {%- if block.settings.title1 != blank and block.settings.answer1 != blank -%}
+            <div class="Faq_container">
+            <div class="Faq__Item">
+               <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
+              <div class="Faq__ItemWrapper">
+                <div class="Faq__Question">{{ block.settings.title1 | escape }}</div>
+
+                <div class="Faq__AnswerWrapper clsHide">
+                  <div class="Faq__Answer">
+                    {{ block.settings.answer1 }}
+                  </div>
+                </div>
+              </div>
+            </div>
+    		</div>
+          {%- endif -%}
+    
+          {%- if block.settings.title2 != blank and block.settings.answer2 != blank -%}
+            <div class="Faq_container">
+            <div class="Faq__Item">
+              <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
+              <div class="Faq__ItemWrapper">
+                <div class="Faq__Question">{{ block.settings.title2 | escape }}</div>
+
+                <div class="Faq__AnswerWrapper clsHide">
+                  <div class="Faq__Answer">
+                    {{ block.settings.answer2 }}
+                  </div>
+                </div>
+              </div>
+            </div>
+   		 </div>
+          {%- endif -%}
+    
+          {%- if block.settings.title3 != blank and block.settings.answer3 != blank -%}
+            <div class="Faq__Item">
+              <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
+              <div class="Faq__ItemWrapper">
+                <div class="Faq__Question">{{ block.settings.title3 | escape }}</div>
+
+                <div class="Faq__AnswerWrapper clsHide">
+                  <div class="Faq__Answer">
+                    {{ block.settings.answer3 }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.title != blank and block.settings.answer != blank -%}
+    	  <div class="Faq_container">
+            <div class="Faq__Item">
+              <span class="Faq__Icon">{% render 'icon' with 'select-arrow-right' %}</span>
+             <div class="Faq__ItemWrapper">
+                <div class="Faq__Question">{{ block.settings.title | escape }}</div>
+
+                <div class="Faq__AnswerWrapper clsHide">
+                  <div class="Faq__Answer">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+            </div>
+    	</div>
+          {%- endif -%}
+    {%- endfor -%}
+  </div>
+  
+</div>
+</div>
+
+{%schema%}
+  {
+  "name": "FAQ",
+  "blocks": [
+     {
+       "type": "separator",
+       "name": "Section separator",
+       "settings": [
+         {
+           "type": "text",
+           "id": "title",
+           "label": "Heading",
+           "default": "heading here"
+         }
+       ]
+     },
+     {
+      "type": "questions",
+      "name": "Questions",
+      "settings":[
+         { 
+          "type": "text",
+          "id" : "title1",
+          "label":"Question 1",
+		  "default":"Can I get my product personalized?"
+         },
+	     {
+	      "type": "richtext",
+          "id" :  "answer1",
+          "label": "Answer 1",
+		   "default": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.</p>"
+         },
+	     {
+          "type":"text",
+		  "id" :"title2",
+          "label": "Question 2",
+		   "default":"Can I get my product personalized?"
+	     },
+	     {
+	      "type": "richtext",
+          "id" : "answer2",
+          "label": "Answer 2",
+		  "default": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.</p>"
+	     },
+         {
+	      "type" : "text",
+          "id"   : "title3",
+          "label": "Question 3",
+		    "default":"Can I get my product personalized?"
+	     },
+         {
+          "type" : "richtext",
+          "id"   : "answer3",
+          "label": "Answer 3",
+		  "default": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.</p>"
+	     }
+      ]
+   }
+],
+  "presets": [
+     {
+       "name": "FAQ",
+       "blocks": [
+         {
+           "type": "separator"
+         },
+		 {
+		   "type": "questions"
+   		 }
+       ]
+     }
+   ]
+}
+
+{%endschema%}
+
+<style>
+  .cls{
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .page{
+      display: flex;
+  }
+  .pagelayout{
+    max-width: 1000px;
+    margin: 35px auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .FaqSummary__Item {
+    list-style: none;
+    margin-bottom: 12px;
+}
+  .Faq__Icon{
+     position: absolute;
+    left: -10px;
+  }
+  .Faq__Item{
+      position: relative;
+    margin: 14px 0;
+  }
+  .FaqSummary__Link{
+  color: black;
+  }
+/*   .FaqSummary__LinkLabel{
+  color: black;
+  }
+ .FaqSummary__LinkLabel:active{
+   color: black;
+  } */
+  .clsShow{
+  	display:block;
+  }
+  .clsHide{
+  	display:none;
+  }
+  
+  @media only screen and (max-width: 765px){
+    .FaqSummary__Item {
+      display:none;
+    }
+    .page {
+     display: block;
+    margin: 0 auto;
+    padding: 0px 30px;
+}
+  }
+  @media only screen and (min-width:765px) and (max-width:1000px){}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){ 
+$('.Faq__Question').click(function(e) {
+  	e.preventDefault();
+
+  var $thisVar = $(this);
+    if($thisVar.next().hasClass("clsShow")){
+        $(".Faq__AnswerWrapper").each(function() {
+        $(this).removeClass("clsShow");
+        $(this).addClass("clsHide");
+        
+    });
+        $thisVar.next().removeClass("clsShow");
+        $thisVar.next().addClass("clsHide");
+    }else{
+        $(".Faq__AnswerWrapper").each(function() {
+        $(this).removeClass("clsShow");
+        $(this).addClass("clsHide");
+        
+    });
+        $thisVar.next().addClass("clsShow");
+        $thisVar.next().removeClass("clsHide");
+    }
+});
+});
+ 
+</script>
+

@@ -1,0 +1,35 @@
+{%- for block in section.blocks -%}
+<a href="{{collection.product}}"><img src="{{ block.settings.image | img_url: 'master'  }}"</a>
+{%- endfor -%}
+
+{% schema %}
+    {
+      "name": "testcollection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "image"
+        }
+          ],
+   "blocks": [{
+        "type": "image",
+        "name": "Image",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        }
+       
+      ]
+        }],
+  "presets": [
+        {
+          "name": "image",
+          "category": "image"       
+        }
+      ]
+    }
+  {% endschema %}

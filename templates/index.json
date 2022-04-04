@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "video": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1647931975c9cdde6d": {
+      "type": "image_text",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "16485542041810619b": {
+      "type": "Testmonial-Section",
+      "blocks": {
+        "1648554204825ac83d-0": {
+          "type": "testmonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CASA12_20_1_540x_32b21f33-46a5-4ca6-902d-13953a68047e.jpg",
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "title": "Author",
+            "rating": 5
+          }
+        },
+        "1648554204825ac83d-1": {
+          "type": "testmonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BC1AB_20-1_540x_0a246f6e-8dab-4473-97fb-78c5fa527f9d.jpg",
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "title": "Author",
+            "rating": 5
+          }
+        },
+        "1648554204825ac83d-2": {
+          "type": "testmonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMARSFASHION_SB-01-YB_05_20copy_360x_f43953cf-45c3-482a-978f-5e188736e345.jpg",
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "title": "Author",
+            "rating": 5
+          }
+        },
+        "93b4da28-576a-495b-89f3-8152ab514d2e": {
+          "type": "testmonial",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/CASA12_20_1_540x_32b21f33-46a5-4ca6-902d-13953a68047e.jpg",
+            "content": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "title": "Author",
+            "rating": 5
+          }
+        }
+      },
+      "block_order": [
+        "1648554204825ac83d-0",
+        "1648554204825ac83d-1",
+        "1648554204825ac83d-2",
+        "93b4da28-576a-495b-89f3-8152ab514d2e"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "subtitle": "",
+        "background_color": "#FFFFFF",
+        "bg-image": "shopify:\/\/shop_images\/CASA12_20_1_540x_32b21f33-46a5-4ca6-902d-13953a68047e.jpg",
+        "style_title": "title_4",
+        "ter_des": "6"
+      }
+    }
+  },
+  "order": [
+    "video",
+    "1647931975c9cdde6d",
+    "16485542041810619b"
+  ]
+}

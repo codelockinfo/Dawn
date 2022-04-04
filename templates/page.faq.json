@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-faq",
+      "blocks": {
+        "1b38e8e7-9a57-4d25-a409-0dbe56002190": {
+          "type": "separator",
+          "settings": {
+            "title": "Shopping"
+          }
+        },
+        "a68eec20-17f5-42bf-b030-7a021531d0e5": {
+          "type": "questions",
+          "settings": {
+            "title1": "Can I get my product personalized?",
+            "answer1": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>",
+            "title2": "Can I get my product personalized?",
+            "answer2": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>",
+            "title3": "Can I get my product personalized?",
+            "answer3": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>"
+          }
+        },
+        "76625935-63f6-4635-97f9-92a80786224b": {
+          "type": "questions",
+          "settings": {
+            "title1": "Can I get my product personalized?",
+            "answer1": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>",
+            "title2": "Can I get my product personalized?",
+            "answer2": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>",
+            "title3": "Can I get my product personalized?",
+            "answer3": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>"
+          }
+        },
+        "2b0a7eaa-69c7-4206-ba1a-6241da4f1ebd": {
+          "type": "separator",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "2727e6cd-fbfa-4e97-ae2a-45c30232adb0": {
+          "type": "questions",
+          "settings": {
+            "title1": "Can I get my product personalized?",
+            "answer1": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>",
+            "title2": "Can I get my product personalized?",
+            "answer2": "<p>It depends on the creator and the product. All options are outlined on the product page, so look out for customization options there.<\/p>",
+            "title3": "",
+            "answer3": ""
+          }
+        }
+      },
+      "block_order": [
+        "1b38e8e7-9a57-4d25-a409-0dbe56002190",
+        "a68eec20-17f5-42bf-b030-7a021531d0e5",
+        "76625935-63f6-4635-97f9-92a80786224b",
+        "2b0a7eaa-69c7-4206-ba1a-6241da4f1ebd",
+        "2727e6cd-fbfa-4e97-ae2a-45c30232adb0"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

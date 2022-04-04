@@ -1,0 +1,200 @@
+{% assign count = 0 %}
+  <div class="page cl1">
+    <div class="main cl2"> {{section.settings.title}}</div>
+
+    <div class="title">
+    <div class="block cl3">
+      
+      <ul class="main-tab cl4">
+        {%- for block in section.blocks -%}
+          {% assign count = count | plus: 0 %}
+        {%- assign collection = collections[block.settings.collection] -%}
+        <li class="block-cls5" id="demo2"><a id="demo" href="#tb-{{forloop.index}}" data-index="{{count}}" class="tbs {% if forloop.first %}codecurrentt{% endif %}">{{ collection.title}}</a></li>
+        <h3>{{block.settings.title}}</h3>
+        {%- endfor -%}
+      </ul>
+    </div>
+    </div>
+
+
+    <div class="block_climg cl5">
+      {%- for block in section.blocks -%}
+        {% assign count = count | plus: 1 %}
+        {%- assign collection = collections[block.settings.collection] -%}
+       {% paginate collection.products by 8 %}
+      <div class="block-col col-pro cl6{% if forloop.first %} active {% endif %}" id="tb-{{forloop.index}}">
+        <div class="display cls6">
+   
+        {%- for product in collection.products -%}
+                 <div class="hav cl7" >
+                   {% if product.featured_image != blank %}
+                   <div class="product cl8"><a href="{{ product.url}}" class="coolimg"> <img src="{{ product.featured_image | img_url: 'master'  }}" / class="lazyloadimg"></a>
+                     <div class="productt cl9">
+                       {{product.title}}
+                       <br>
+                       {{product.price}}
+                     </div>
+                   </div>
+                   {% endif  %}
+                </div>
+        {%- endfor -%}
+        
+      </div>
+<!--          <div class="view cls20">
+        <a href="collections/{{collection.handle}}">View More</a>
+      </div> -->
+        </div>
+      
+        {% endpaginate %}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {% schema %}
+    {
+      "name": "tabslider",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Tab Slider"
+        }
+          ],
+   "blocks": [{
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title block"
+        },
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection"
+        }
+      ]
+        }],
+  "presets": [
+        {
+          "name": "Tabslider",
+          "category": "Collections"       
+        }
+      ]
+    }
+  {% endschema %}
+<style>
+
+/*      .cl2{
+    font-family: sans-serif;
+    color: black;
+    font-size: 34px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    } */
+  .title{
+    display: block;
+    margin-left: 89px;
+    margin-right: 100px;
+  }
+  
+  .block-cls5 .codecurrentt{
+     padding: 8px 25px 7px;
+      border: 1px solid transparent;
+      border-color: #222;
+      border-radius: 35%;
+  }
+  
+  .block-cls5 a{
+      color: black;
+    text-decoration: none;
+  }
+    .main-tab{
+         margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    }
+  
+  .productt.cl9{
+   color: black;
+         margin-bottom: 10px;
+        line-height: 17px;
+  }
+    li{
+        list-style: none;
+    }
+   
+  .hav{
+    flex: 0 0 25%;
+    max-width: 25%;
+    justify-content: center;
+  }
+/*   .col-pro{
+   width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  } */
+  .collectionimg img{
+      width: 100%;
+  }
+  .product img{
+      width: 200px;
+    height: 200px;
+  }
+  
+  .product{
+   display:block;
+  }
+  .block_climg .block-col{
+     display:flex;
+     position: relative;
+
+    }
+     .block_climg .col-pro.active {
+        display:block;
+  }
+     .block_climg .col-pro {
+      display:none;
+}
+  .display.cls6{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 349px;
+    margin-right: 269px;
+  }
+   .cl3{
+       margin-bottom: 2%;
+       margin-top: 2%;
+}
+
+</style>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+  <script>
+
+
+    $(document).on('click','#demo',function(e){
+        e.preventDefault()
+        var value = $(this).attr('href');
+        console.log(value);
+        $('.block-col.active').removeClass('active ');
+        $(value).addClass('active ');
+
+        $('.tbs.codecurrentt').removeClass('codecurrentt');
+        $(this).addClass('codecurrentt');
+      
+    });
+  </script>
+
+  
+
+  
+
+
+

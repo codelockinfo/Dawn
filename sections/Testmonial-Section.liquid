@@ -1,0 +1,798 @@
+{% assign cl = section.settings.ter_des%}
+{% assign title = section.settings.style_title%}
+{{title}}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="test_container">
+  
+<div class="section_header">
+  <div class="header">
+    {%- if title =="title_1"-%}<div class="title1"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_2"-%}<div class="title2"><span class="md10">{{section.settings.title}}</span></div>{% endif %} 
+    {%- if title =="title_3"-%}<div class="title3"><span class="md10">{{section.settings.title}}</span></div>{% endif %} 
+    {%- if title =="title_4"-%}<div class="title4"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_5"-%}<div class="title5"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_6"-%}<div class="title6"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_7"-%}<div class="title7"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_8"-%}<div class="title8"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_9"-%}<div class="title9"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_10"-%}<div class="title10"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_11"-%}<div class="title11"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_12"-%}<div class="title12"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+    {%- if title =="title_13"-%}<div class="title13"><span class="md10">{{section.settings.title}}</span></div>{% endif %}
+  
+    <div class="subtxt">{{section.settings.subtitle}}</div>
+  </div>
+  
+   {%for block in section.blocks%}
+    <div class="listtestdesign1">
+      {%- if cl == "1" -%}
+      <div class="design1_licls">  
+     <div class="design1_images"><img src="{{block.settings.image | img_url: ' '}}"/></div> 
+      
+      <div class="design1_clss">
+      <div class="design1_rating">
+       {%  assign sid = block.settings.rating %}
+         {%- if sid == 1 -%}
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 2 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 3 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 4 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+        {%  assign sid = block.settings.rating %}
+        {%- if sid == 5 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+        {% endif %}
+        
+       </div>
+        <div class="design1_con1">
+        <div class="design1_content">{{block.settings.content}}</div>
+        </div>
+     <div class="design1_auth">{{block.settings.title}}</div>
+      </div>
+    </div>
+   {% endif %}
+  </div>
+  
+    
+
+  <div class="listtestdesign2">
+    {%- if cl == "2" -%}
+    <div class="design2_licls">  
+     <div class="design2_images"><img src="{{block.settings.image | img_url: ' '}}"/></div> 
+      
+      <div class="design2_clss">
+      <div class="design2_rating">
+       {%  assign sid = block.settings.rating %}
+         {%- if sid == 1 -%}
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 2 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 3 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 4 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+        {%  assign sid = block.settings.rating %}
+        {%- if sid == 5 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+        {% endif %}
+        
+       </div>
+        <div class="design2_con1">
+        <div class="design2_content">{{block.settings.content}}</div>
+        </div>
+     <div class="design2_auth">{{block.settings.title}}</div>
+      </div>
+    </div>
+    {% endif %}
+    </div>
+  
+  <div class="listtestdesign3">
+    {%- if cl == "3" -%}
+    <div class="design3_licls">  
+      <div class="des">
+     <div class="design3_images"><img src="{{block.settings.image | img_url: ' '}}"/></div> 
+      
+        <div class="desnew">
+       <div class="design3_auth">{{block.settings.title}}</div>
+      <div class="design3_rating">
+       {%  assign sid = block.settings.rating %}
+         {%- if sid == 1 -%}
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 2 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 3 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 4 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+        {%  assign sid = block.settings.rating %}
+        {%- if sid == 5 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+        {% endif %}
+          </div>
+       </div>
+      </div>
+       <div class="design3_con1">
+       <div class="design3_content">{{block.settings.content}}</div>
+       </div>
+      
+    </div>
+    {% endif %}
+    </div>
+  
+   <div class="listtestdesign4">
+    {%- if cl == "4" -%}
+    <div class="design4_licls"> 
+     <div class="design4_con1">
+     <div class="design4_content">{{block.settings.content}}</div>
+     </div>
+      <div class="des4">
+     <div class="design4_images"><img src="{{block.settings.image | img_url: ' '}}"/></div> 
+      
+      <div class="design4_clss">
+       <div class="design4_auth">{{block.settings.title}}</div>
+      <div class="design4_rating">
+       {%  assign sid = block.settings.rating %}
+         {%- if sid == 1 -%}
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 2 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 3 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 4 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+        {%  assign sid = block.settings.rating %}
+        {%- if sid == 5 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+        {% endif %}
+        
+       </div>
+      </div>
+      </div>
+    </div>
+    {% endif %}
+    </div>
+  
+  <div class="listtestdesign5">
+    {%- if cl == "5" -%}
+    <div class="design5_licls">  
+     <div class="design5_images"><img src="{{block.settings.image | img_url: ' '}}"/></div> 
+      
+      <div class="design5_clss">
+      <div class="design5_rating">
+       {%  assign sid = block.settings.rating %}
+         {%- if sid == 1 -%}
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 2 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 3 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 4 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+        {%  assign sid = block.settings.rating %}
+        {%- if sid == 5 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+        {% endif %}
+        
+       </div>
+        <div class="design5_con1">
+        <div class="design5_content">{{block.settings.content}}</div>
+        </div>
+         <div class="design5_auth">{{block.settings.title}}</div>
+      </div>
+    </div>
+    {% endif %}
+    </div>
+  
+    <div class="listtestdesign6">
+    {%- if cl == "6" -%}
+    <div class="design6_licls">  
+      <div class="des6">
+     <div class="design6_images"><img src="{{block.settings.image | img_url: ' '}}"/></div> 
+      
+        <div class="desnew6">
+       <div class="design6_auth">{{block.settings.title}}</div>
+      <div class="design6_rating">
+       {%  assign sid = block.settings.rating %}
+         {%- if sid == 1 -%}
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 2 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 3 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+         {%  assign sid = block.settings.rating %}
+         {%- if sid == 4 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+         {% endif %}  
+        
+        {%  assign sid = block.settings.rating %}
+        {%- if sid == 5 -%}
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+        {% endif %}
+          </div>
+       </div>
+      </div>
+       <div class="design6_con1">
+       <div class="design6_content">{{block.settings.content}}</div>
+       </div>
+      
+    </div>
+    {% endif %}
+    </div>
+  
+  {%endfor%}
+   
+ </div>
+  
+
+
+{% schema %}
+  {
+    "name": "Testmonial",
+	"class": "Test-cls",
+    "settings": [
+        {
+         "type": "text",
+         "id"  : "title",
+         "label": "Heading",
+ 		 "default": "Testimonials"
+        },
+        {
+		 "type": "textarea",
+          "id": "subtitle",
+		  "label": "Sub Text"
+		},
+        {
+       	 "type": "header",
+         "content": "==Settings"
+        },
+        {
+  		 "type": "color",
+         "id": "background_color",
+         "label": "Background color",
+         "default": "#B9A16B"
+		},
+		{
+  		 "type": "image_picker",
+  		 "id": "bg-image",
+ 		 "label": "Custom Background Image"
+		},
+        
+      {
+        "type": "select",
+        "id": "style_title",
+        "options": [
+         {
+            "value": "title_1",
+            "label": "Design 1"
+         },
+         {
+            "value": "title_2",
+            "label": "Design 2"
+          },
+         {
+            "value": "title_3",
+            "label": "Design 3"
+          },
+         {
+            "value": "title_4",
+            "label": "Design 4"
+          },
+         {
+            "value": "title_5 lazyload",
+            "label": "Design 5"
+          },
+         {
+            "value": "title_6",
+            "label": "Design 6"
+          },
+         {
+            "value": "title_7 +la",
+            "label": "Design 7 (with line-awesome)"
+          },
+         {
+            "value": "title_8",
+            "label": "Design 8"
+          },
+         {
+            "value": "title_9",
+            "label": "Design 9"
+          },
+         {
+            "value": "title_10",
+            "label": "Design 10"
+          },
+         {
+            "value": "title_11",
+            "label": "Design 11"
+          },
+         {
+            "value": "title_12",
+            "label": "Design 12"
+          },
+         {
+            "value": "title_13",
+            "label": "Design 13"
+          }
+        ],
+        "label": "Design Title:"
+      },
+ 		{
+        "type": "select",
+        "id": "ter_des",
+        "options": [
+          {
+            "value": "1",
+            "label": "Design 1"
+          },
+          {
+            "value": "2",
+            "label": "Design 2"
+          },
+          {
+            "value": "3",
+            "label": "Design 3"
+          },
+          {
+            "value": "4",
+            "label": "Design 4"
+          },
+          {
+            "value": "5",
+            "label": "Design 5"
+          },
+          {
+            "value": "6",
+            "label": "Design 6"
+          }
+        ],
+        "label": "Testimonial design",
+        "default": "1"
+      }
+       ],
+    "blocks": [
+  		{
+    	 "name": "Quote",
+    	 "type": "testmonial",
+         "settings": [
+   			{
+  	  		 "type": "image_picker",
+  	  		 "id": "image",
+  	         "label": "Author Image"
+			},
+    		{
+      		 "type": "richtext",
+       		 "id":  "content",
+      		 "label": "Text",
+       		 "default": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.</p>"
+			},
+    		{
+       		 "type": "text",
+       		 "id": "title",
+             "label": "Author Name",
+             "default": "Author"
+			},
+			{
+	    	 "type": "range",
+        	 "id": "rating",
+             "min": 1,
+             "max": 5,
+             "step": 1,
+             "label": "Rating",
+             "info": "Set less than '1' to disable Rating.",
+             "default": 5
+            }
+    ]
+  }
+],
+	"presets": [
+     {
+       "name": "Testmonial",
+       "blocks": [
+         {
+           "type": "testmonial"
+         },
+         {
+           "type": "testmonial"
+         },
+		 {
+		   "type": "testmonial"
+		 }
+       ]
+     }
+   ]
+  }
+{% endschema %}
+<style>
+  .section_header{ 
+    text-align: center;
+    font-size: 20px;
+  }
+  .test_container{
+    width: auto;
+    height: auto;
+    max-width: 1000px;
+    margin: auto;
+    background:{{section.settings.background_color}}!important;
+    background:url({{section.settings.bg-image.src | img_url: 'master'}});
+    background-size: cover;
+    padding-bottom: 10px;
+  }
+
+ .listtestdesign1 .design1_images{
+    margin: 0 auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }  
+  
+  .listtestdesign1 img{
+  width: 100%
+  }
+  .listtestdesign1 .design1_auth{
+   text-align: center;
+  }
+  .listtestdesign1 .design1_content{
+    text-align: center;
+  }
+  .listtestdesign1 .design1_rating{
+    color: #fec42d;
+    text-align: center;
+    font-size: 13px;
+}
+  .listtestdesign1 .design1_clss{
+  margin: 20px 0;
+  }
+  
+  .listtestdesign1 .design1_cls1{
+  padding-bottom: 1px;
+}
+ 
+  .listtestdesign2 .design2_images{
+   margin: 0 auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+    .listtestdesign2 img{
+  width: 100%
+  }
+   .listtestdesign2 .design2_auth{
+   text-align: center;
+  }
+  .listtestdesign2 .design2_content{
+    text-align: center;
+  }
+  .listtestdesign2 .design2_rating{
+    color: #fec42d;
+    text-align: center;
+    font-size: 13px;
+}
+  .listtestdesign2 .design2_clss{
+  margin: 20px 0;
+  }
+  
+  .listtestdesign2 .design2_cls1{
+  padding-bottom: 1px;
+}
+  .listtestdesign2 .design2_licls{
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 15px 34px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    margin: 26px 15px;
+  }
+  .listtestdesign3 .des{
+  display: flex;
+  }
+  .listtestdesign3 .desnew{
+    margin-right: 776px;
+    margin-top: -5px;
+  }
+.listtestdesign3 .design3_images{ 
+    margin: 0 auto;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+ 
+    .listtestdesign3 img{
+  width: 100%
+  }
+   .listtestdesign3 .design3_auth{
+    font-weight: 600;
+    color: #4d5959;
+  }
+  .listtestdesign3 .design3_rating{
+    color: #fec42d;
+    font-size: 13px;
+}
+  .listtestdesign3 .design3_cls1{
+  padding-bottom: 1px;
+}
+  .listtestdesign3 .design3_licls{
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 15px 34px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    margin: 26px 15px;
+  }
+  .listtestdesign4 .des4{
+    display: flex;
+  }
+ .listtestdesign4 .design4_images{
+    margin: 0 auto;
+    position: relative;
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+    .listtestdesign4 img{
+  width: 100%
+  }
+  .listtestdesign4 .design4_licls{
+    border-color: #eee;
+    padding: 41px 20px 49px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    margin: 0px 15px;
+}
+  .listtestdesign4 .design4_rating{
+    color: #fec42d;
+    font-size: 13px;
+}
+  .listtestdesign4 .design4_clss{
+  margin-right: 750px;
+  }
+  
+  .listtestdesign4.design4_cls1{
+  padding-bottom: 1px;
+}
+ 
+ .listtestdesign5 .design5_images{
+   margin: 0 auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+    .listtestdesign5 img{
+  width: 100%
+  }
+   .listtestdesign5 .design5_auth{
+   text-align: center;
+  }
+  .listtestdesign5 .design5_content{
+    text-align: center;
+  }
+  .listtestdesign5 .design5_rating{
+    color: #fec42d;
+    text-align: center;
+    font-size: 13px;
+}
+  .listtestdesign5 .design5_clss{
+  margin: 20px 0;
+  }
+  
+  .listtestdesign5 .design5_cls1{
+  padding-bottom: 1px;
+} 
+  .listtestdesign5 .design5_licls{
+    border: 1px solid #eee;
+    padding: 30px;
+    background: #fff;
+    margin: 25px 15px;
+  }
+  
+  
+
+  .listtestdesign6 .desnew6{
+    margin-right: 725px;
+    margin-top: -5px;
+    }
+  
+  .listtestdesign6 .des6{
+  display: flex;
+  }
+.listtestdesign6 .design6_images{ 
+    margin: 0 auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+ 
+    .listtestdesign6 img{
+  width: 100%
+  }
+   .listtestdesign6 .design6_auth{
+    font-weight: 600;
+    color: #4d5959;
+  }
+  .listtestdesign6 .design6_rating{
+    color: #fec42d;
+    font-size: 13px;
+}
+
+  .listtestdesign6 .design6_licls{
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 15px 34px rgb(0 0 0 / 20%);
+    margin: 26px 15px;
+  }
+  
+/* Title Design   */
+   .header .title2:before{
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+    margin-right: 14px;
+  }
+   .header .title2:after{
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background: #222;
+    margin-bottom: 5px;
+    margin-left: 14px;
+  }
+ .header .title3 span:after{
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 2px;
+    color: blanchedalmond;
+ }
+  
+
+
+
+
+</style>

@@ -1,0 +1,55 @@
+<hr>
+<div id="page-width section-cta">
+  <div class="section-header text-center">
+    <h3> {{ section.settings.text-box }} </h3>
+  </div>
+  <div class="logo_slider">
+  {% for block in section.blocks %}  
+    {{ block.settings }}
+    <div class="item">   
+      <a href="{{ block.settings.link }}"><img src="{{ block.settings.image }}" /></a>
+    </div> 
+    {% endfor %}
+  </div>
+
+</div>  
+<hr>
+{% schema %}
+{
+  "name": "custom tab Slider Section",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Image Slider"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Image",
+      "settings": [
+        {
+          "id": "link",
+          "type": "url",
+          "label": "Image link"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "custom tab slider",
+      "category": "Custom Dynamic Section"
+    }
+  ]
+}
+{% endschema %}
+
+
